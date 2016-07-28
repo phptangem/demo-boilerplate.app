@@ -105,6 +105,13 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'frontend'=>[
+            'name'=>'Name',
+            'email'=>'E-mail Address',
+            'password'=>'Password',
+            'password_confirmation'=>'Password Confirmation',
+        ],
+    ],
 
 ];

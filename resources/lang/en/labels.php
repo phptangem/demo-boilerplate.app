@@ -10,6 +10,9 @@ return [
         'login_box_title'=>'Login',
     ],
     'frontend'=>[
+        'auth'=>[
+            'register_button'=>'register',
+        ],
         'macros'=>[
             'country'=>[
                 'alpha' => 'Country Alpha Codes',

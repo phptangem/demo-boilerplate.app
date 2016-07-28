@@ -7,8 +7,11 @@
  */
 namespace App\Services\Access\Traits;
 
+use Illuminate\Foundation\Auth\RedirectsUsers;
+
 trait AuthenticatesUsers
 {
+    use RedirectsUsers;
     /**
      * @return mixed
      */

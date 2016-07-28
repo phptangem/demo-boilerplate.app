@@ -4,6 +4,7 @@ return [
         'auth'=>[
             'confirmation'=>[
                 'already_confirmed'=>'Your account has already confirmed',
+                'created_confirm'=>'Your account was successfully created.We have sent you an email to confirm you account. ',
                 'mismatch'=>'Your confirmation code does not match.',
                 'not_found'=>'The confirmation code does not found.',
             ],
