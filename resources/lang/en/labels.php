@@ -6,12 +6,12 @@
  * Time: 13:47
  */
 return [
-    'auth'=>[
-        'login_box_title'=>'Login',
-    ],
     'frontend'=>[
         'auth'=>[
+            'login_box_title'=>'Login',
+            'login_button'=>'Login',
             'register_button'=>'register',
+            'remember_me'=>'Remember Me',
         ],
         'macros'=>[
             'country'=>[
@@ -34,6 +34,9 @@ return [
             'territories'=>[
                 'canada'=>'Canada Province & Territories List',
             ],
+        ],
+        'passwords'=>[
+            'forgot_password'=>'Forgot Your Password?',
         ],
     ],
     'general'=>[

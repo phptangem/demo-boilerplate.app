@@ -56,7 +56,7 @@ class EloquentUserRepository implements UserRepositoryContract
      */
     public function findByToken($token)
     {
-        $user = User::where('confirmation_token', $token)->first();
+        $user = User::where('confirmation_code', $token)->first();
 
         if(! $user instanceof User){
             throw new GeneralException(trans('exceptions.frontend.auth.confirmation.not_found'));
@@ -72,6 +72,7 @@ class EloquentUserRepository implements UserRepositoryContract
      */
     public function create($data, $provider = false)
     {
+
         if($provider){
             $user = User::create([
                 'name' => $data['name'],
@@ -174,8 +175,7 @@ class EloquentUserRepository implements UserRepositoryContract
     public function confirmAccount($token)
     {
         $user =$this->findByToken($token);
-
-        if($user->isConfirmed == 1){
+        if($user->confirmed == 1){
             throw new GeneralException(trans('exceptions.frontend.auth.confirmation.already_confirmed'));
         }
 
@@ -183,7 +183,6 @@ class EloquentUserRepository implements UserRepositoryContract
             $user->confirmed = 1;
             return $user->save();
         }
-
         throw new GeneralException(trans('exceptions.frontend.auth.confirmation.mismatch'));
     }
 
@@ -196,8 +195,7 @@ class EloquentUserRepository implements UserRepositoryContract
         if(! $user instanceof User){
             $user = $this->find($user);
         }
-
-        return Mail::send('frontend.auth.email.confirm',['token' => $user->confirmation_code], function($message) use($user){
+        return Mail::send('frontend.auth.emails.confirm',['token' => $user->confirmation_code], function($message) use($user){
             $message->to($user->email, $user->name)->subject(app_name().':'.trans('exceptions.frontend.auth.confirmation.confirm'));
         });
     }

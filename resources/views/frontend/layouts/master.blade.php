@@ -1,7 +1,6 @@
 <html>
     <head>
         <meta name="_token" content="{{ csrf_token()}}">
-
         <title>@yield('title',app_name())</title>
 
         <!-- Meta -->

@@ -4,11 +4,14 @@ return [
         'auth'=>[
             'confirmation'=>[
                 'already_confirmed'=>'Your account has already confirmed',
+                'confirm'=>'Confirm your account',
                 'created_confirm'=>'Your account was successfully created.We have sent you an email to confirm you account. ',
                 'mismatch'=>'Your confirmation code does not match.',
                 'not_found'=>'The confirmation code does not found.',
+                'success'=>'Your account has been successfully confirmed',
             ],
             'email_token'=>'The e-mail address has already been taken',
+            'resend'=>'Your account is not confirmed. Please click the confirmation link in your email, or <a href="'.route('account.confirm.resend', ':user_id'). '">click here</a> to resend the confirmation e-mail.',
             'password'=>[
                 'change_mismatch'=>'This is not your old password',
             ],

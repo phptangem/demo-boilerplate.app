@@ -179,7 +179,6 @@ trait UserAccess
         if(is_array($role)){
             $role = $role['id'];
         }
-
         $this->roles()->attach($role);
     }
 

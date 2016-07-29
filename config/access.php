@@ -12,7 +12,10 @@ return [
      * Update the group if it is in a different namespace.
      */
     'group'=>App\Models\Access\Permission\PermissionGroup::class,
-
+    /*
+     * assigned_roles table used by access to save assigned roles to the database
+     */
+    'assigned_roles_table'=>'assigned_roles',
     /*
      *Permissions table used by access to save permissions to the database
      */
@@ -21,7 +24,10 @@ return [
      * Role model used by Access to create correct relations. Update the role if it is in a different namespace.
     */
     'role'=>App\Models\Access\Role\Role::class,
-
+    /*
+     *Roles table used by access to save roles to the database
+     */
+    'roles_table'=>'roles',
     /*
      * Configuration for roles
      */
