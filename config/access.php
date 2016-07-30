@@ -17,6 +17,11 @@ return [
      */
     'assigned_roles_table'=>'assigned_roles',
     /*
+     * permission_user table used by Access to save relationship between permissions and users to the database.
+     * This table is only for permissions that belong directly to a specific user and not a role
+     */
+    'permission_user_table' => 'permission_user',
+    /*
      *Permissions table used by access to save permissions to the database
      */
     'permission_group_table'=>'permission_groups',
@@ -69,4 +74,11 @@ return [
         //The role the user is assigned when they signed up from the frontend
         'default_role'=> 'User',
     ],
+
+    /*
+     * Socialite session variable name
+     * Contains the name of the currently logged in provider in the users session
+     * Makes it so social logins can not change passwords, etc.
+     */
+    'socialite_session_name' => 'socialite_provider',
 ];

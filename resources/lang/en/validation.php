@@ -109,8 +109,10 @@ return [
         'frontend'=>[
             'name'=>'Name',
             'email'=>'E-mail Address',
+            'old_password'=>'Old Password',
             'password'=>'Password',
             'password_confirmation'=>'Password Confirmation',
+            'new_password_confirmation'=>'New Password Confirmation',
         ],
     ],
 

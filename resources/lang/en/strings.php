@@ -24,6 +24,10 @@ return [
             'view_console_it_works'=>'View console, you should see \'it works!\' which is coming from FrontendController@index',
         ],
         'welcome_to'=>'Welcome to :place',
+        'user'=>[
+            'password_updated'=>'Password Successfully updated',
+            'profile_updated'=>'Profile Successfully updated',
+        ],
     ],
 
 ];

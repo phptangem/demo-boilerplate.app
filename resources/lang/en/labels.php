@@ -38,9 +38,28 @@ return [
         'passwords'=>[
             'forgot_password'=>'Forgot Your Password?',
         ],
+        'user'=>[
+            'profile'=>[
+                'avatar'=>'Avatar',
+                'edit_information'=>'Edit Information',
+                'name'=>'Name',
+                'email'=>'E-mail',
+                'created_at'=>'Created At',
+                'last_updated'=>'Last Updated',
+                'update_information'=>'Update Information',
+            ],
+            'passwords'=>[
+                'change'=>'Change Password',
+            ],
+        ],
     ],
     'general'=>[
+        'actions'=>'Actions',
+        'buttons'=>[
+            'save'=>'Save',
+            'update'=>'Update',
+        ],
+        'no'=>'No',
         'yes'=>'Yes',
-        'no'=>'No'
     ],
 ];

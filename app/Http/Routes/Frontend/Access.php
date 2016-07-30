@@ -3,6 +3,19 @@
  * Frontend access controller
  */
 Route::group(['namespace'=>'Auth'],function(){
+
+    /**
+     * These routes require the user to be logged in
+     */
+    Route::group(['middleware'=>'auth'], function(){
+        Route::get('logout', 'AuthController@logout')->name('auth.logout');
+        Route::get('password/change', 'PasswordController@showChangePasswordForm')->name('auth.password.change');
+        Route::post('password/update', 'PasswordController@changePassword')->name('auth.password.update');
+    });
+
+    /**
+     *These routes require the  user NOT be logged in
+     */
     Route::group(['middleware'=>'guest'], function(){
 
         //Authentication Routes

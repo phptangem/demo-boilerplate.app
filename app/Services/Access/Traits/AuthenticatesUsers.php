@@ -26,6 +26,11 @@ trait AuthenticatesUsers
 //            ->withSocialiteLinks($this->getSolialLinks());
     }
 
+    /**
+     * @param LoginRequest $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     * @throws GeneralException
+     */
     public function login(LoginRequest $request)
     {
         $throttles = in_array(
@@ -34,6 +39,8 @@ trait AuthenticatesUsers
         if ($throttles && $this->hasTooManyLoginAttampts($request)) {
             return $this->sendLockoutResponse($request);
         }
+
+
         if (auth()->attempt($request->only($this->loginUsername(), 'password'), $request->has('remember'))) {
             return $this->handleUserWasAuthenticated($request, $throttles);
         }
@@ -48,6 +55,19 @@ trait AuthenticatesUsers
             ]);
     }
 
+    public function logout()
+    {
+        /**
+         * Remove the socialite variable if exists
+         */
+        if(app('session')->has(config('access.socialite_session_name'))){
+            app('session')->forget(config('access.socialite_session_name'));
+        }
+
+        event(new UserLoggedout(access()->user()));
+        auth()->logout();
+        return redirect(property_exists($this,'redirectAfterLogout') ? $this->redirectAfterLogout:'/');
+    }
     /**
      * The is here so that we can use the default Laravel ThrottlesLogins Trait
      *
@@ -81,6 +101,6 @@ trait AuthenticatesUsers
         }
 
         event(new UserLoggedIn(access()->user()));
-        return redirect()->intended($this->redirectedPath());
+        return redirect()->intended($this->redirectPath());
     }
 }

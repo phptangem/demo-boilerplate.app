@@ -103,10 +103,10 @@ class Access
         if($user= $this->user()){
             //if not an array, make a one item array
             if(! is_array($permissions)){
-                $permission = array($permissions);
+                $permissions = array($permissions);
             }
 
-            return $user->allowMutiple($permissions, $needsAll);
+            return $user->allowMultiple($permissions, $needsAll);
         }
 
         return false;
