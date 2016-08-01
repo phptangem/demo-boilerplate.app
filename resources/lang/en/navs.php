@@ -7,6 +7,7 @@ return [
         'macros'=>'Macros',
         'register'=>'Register',
         'user'=>[
+            'administration'=>'Administration',
             'change_password'=>'Change Password',
             'my_information'=>'My Information',
         ],

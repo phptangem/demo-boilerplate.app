@@ -25,6 +25,7 @@ Route::group(['middleware'=>'web'],function(){
  */
 Route::group(['namespace'=>'Backend', 'prefix'=>'admin', 'middleware'=>'admin'], function(){
     require(__DIR__.'/Routes/Backend/Access/Access.php');
+    require(__DIR__.'/Routes/Backend/Access/Dashboard.php');
 });
 
 /**

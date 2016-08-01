@@ -15,7 +15,7 @@ class RouteNeedsPermission
      */
     public function handle($request, Closure $next, $permission)
     {
-        if(! access()->allowPermission($permission)){
+        if(! access()->allow($permission)){
             return redirect()
                 ->route('frontend.index')
                 ->withFlashDanger(trans('auth.general_error'));
