@@ -30,4 +30,19 @@ return [
         ],
     ],
 
+    'backend'=>[
+        'general'=>[
+            'member_since'=>'Member since',
+            'see_all'=>[
+                'messages'=>'See all messages',
+                'notifications'=>'See all notifications',
+                'tasks'=>'See all tasks',
+            ],
+            'you_have'=>[
+                'messages'=>'{0} You don\'t have messages|{1} You have 1 message|[2,Inf] You have :number messages',
+                'notifications'=>'{0} You don\'t have notifications|{1} You have one notification |[2, Inf]You have :number notifications',
+                'tasks'=>'{0} You don\'t have task |{1} You have 1 tasks|[2,Inf] You have :number tasks',
+            ],
+        ],
+    ],
 ];

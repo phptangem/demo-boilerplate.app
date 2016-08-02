@@ -1,5 +1,8 @@
 <?php
 return [
+    'backend'=>[
+        'button'=>'Button',
+    ],
     'frontend'=>[
         'dashboard'=>'Dashboard',
         'home'=>'Home',

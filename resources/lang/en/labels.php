@@ -61,5 +61,6 @@ return [
         ],
         'no'=>'No',
         'yes'=>'Yes',
+        'toggle_navigation' => 'Toggle Navigation',
     ],
 ];
