@@ -37,7 +37,8 @@
                                     {{--Start the message--}}
                                     <a href="#">
                                         <div class="pull-left">
-                                            <img src="{!! access()->user()->picture !!}" alt="User Image" class="img-circle" />
+                                            {{--<img src="{!! access()->user()->picture !!}" alt="User Image" class="img-circle" />--}}
+                                            <img src="{!! url('img/avatar.jpg') !!}" alt="User Image" class="img-circle" />
                                         </div>
                                         <h4>
                                             Support Team
@@ -53,7 +54,7 @@
                 </li>
 
                 {{--Notifications Menu--}}
-                <li class="dropdown notification-menu">
+                <li class="dropdown notifications-menu">
                     {{--Menu toggle button--}}
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-bell-o"></i>
@@ -72,7 +73,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="footer"><a href="#">{{trans('strings.backend.general.see_all.notifications')}}}</a></li>
+                        <li class="footer"><a href="#">{{trans('strings.backend.general.see_all.notifications')}}</a></li>
                     </ul>
                 </li>
 
@@ -112,13 +113,15 @@
                 <li class="dropdown user user-menu">
                     {{--Menu Toggle Button--}}
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="{!! access()->user()->picture !!}" alt="User Image" class="user-image">
+                        {{--<img src="{!! access()->user()->picture !!}" alt="User Image" class="user-image">--}}
+                        <img src="{{url('/img/avatar.jpg')}}" alt="User Image" class="user-image">
                         <span class="hidden-xs">{{access()->user()->name}}</span>
                     </a>
 
                     <ul class="dropdown-menu">
                         <li class="user-header">
-                            <img src="{!! access()->user()->picture !!}" alt="User Image" class="img-circle" />
+{{--                            <img src="{!! access()->user()->picture !!}" alt="User Image" class="img-circle" />--}}
+                            <img src="{{url('/img/avatar.jpg')}}" alt="User Image" class="img-circle" />
                             <p>
                                 {!! access()->user()->name !!}-{{trans('roles.web_developer')}}
                                 <small>{{trans('strings.backend.general.member_since')}} XX/XX/XXXX</small>

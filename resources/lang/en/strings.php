@@ -31,13 +31,24 @@ return [
     ],
 
     'backend'=>[
+        'dashboard'=>[
+            'title' => 'Administrative Dashboard',
+            'welcome' => 'Welcome',
+        ],
         'general'=>[
+            'all_rights_reserved'=>'All Rights Reserved.',
+            'boilerplate_link'=>'Laravel 5 Boilerplate',
             'member_since'=>'Member since',
+            'status'=>[
+                'online'=>'Online',
+                'offline'=>'Offline',
+            ],
             'see_all'=>[
                 'messages'=>'See all messages',
                 'notifications'=>'See all notifications',
                 'tasks'=>'See all tasks',
             ],
+            'search_placeholder'=>'Search...',
             'you_have'=>[
                 'messages'=>'{0} You don\'t have messages|{1} You have 1 message|[2,Inf] You have :number messages',
                 'notifications'=>'{0} You don\'t have notifications|{1} You have one notification |[2, Inf]You have :number notifications',

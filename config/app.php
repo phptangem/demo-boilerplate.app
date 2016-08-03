@@ -172,11 +172,14 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Creativeorange\Gravatar\GravatarServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+        HieuLe\Active\ActiveServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
 
         /*
          * Has to override  the Collective\Html\HtmlServiceProvider form singleton
          */
         App\Providers\MacroServiceProvider::class,
+
     ],
 
     /*
@@ -229,10 +232,11 @@ return [
         /*
          * Third Party Alias
          */
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
-        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+        'Active' => HieuLe\Active\Facades\Active::class,
         'Breadcrumbs' => DaveJamesMiller\Breadcrumbs\Facade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+        'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
