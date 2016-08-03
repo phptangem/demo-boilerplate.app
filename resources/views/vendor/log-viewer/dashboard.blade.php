@@ -102,7 +102,7 @@
                     </div>
                 @else
                     <div class="col-md-3">
-                        <canvas id="status-doughnut-chart"></canvas>
+                        <canvas id="stats-doughnut-chart"></canvas>
                     </div>
                     <div class="col-md-9">
                         <div class="row">

@@ -8,9 +8,9 @@
         @yield('meta')
 
         <!-- Styles -->
-        @yield('before-style-end')
+        @yield('before-styles-end')
         {!! Html::style(elixir('css/backend.css')) !!}
-        @yield('after-style-end')
+        @yield('after-styles-end')
 
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>

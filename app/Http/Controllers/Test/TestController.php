@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+//use Log;
 class TestController extends Controller
 {
     public function testWith()
@@ -21,5 +21,11 @@ class TestController extends Controller
     public function testSession()
     {
         dd(session()->all());
+    }
+
+    public function testLog()
+    {
+        Log::error('some errors');
+        return 1;
     }
 }
