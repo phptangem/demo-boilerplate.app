@@ -2,12 +2,14 @@
 Route::group([
     'prefix'=>'access',
     'namespace'=>'Access',
-    'middleware'=>'access.routeNeedPermission:view-access-management',
+    'middleware'=>'access.routeNeedsPermission:view-access-management',
 ],function(){
     /**
      * User Management
      */
     Route::group(['namespace'=>'User'], function(){
+
+        Route::resource('users', 'UserController',['except'=>['show']]);
 
         Route::get('account/confirm/resend/{user_id}', 'UserController@resendConfirmationEmail')->name('admin.account.confirm.resend');
         Route::get('users/deleted','UserController@deleted')->name('admin.access.users.deleted');
