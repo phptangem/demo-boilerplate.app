@@ -6,6 +6,14 @@
  * Time: 13:47
  */
 return [
+    'backend'=>[
+        'access'=>[
+            'users'=>[
+                'active'=>'Active User',
+                'management'=>'User Management',
+            ],
+        ],
+    ],
     'frontend'=>[
         'auth'=>[
             'login_box_title'=>'Login',

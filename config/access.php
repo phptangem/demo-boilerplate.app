@@ -67,12 +67,16 @@ return [
      * Configuration for the user
      */
     'users'=>[
+        //The role the user is assigned when they signed up from the frontend
+        'default_role'=> 'User',
+        /*
+         * Administration tables
+         */
+        'default_per_page'=>'25',
         //Whether or not the user has to confirm their email when signing up
         'confirm_email'=>true,
         //Whether or not the users email can be changed on the edit profile screen
         'change_email'=>false,
-        //The role the user is assigned when they signed up from the frontend
-        'default_role'=> 'User',
     ],
 
     /*

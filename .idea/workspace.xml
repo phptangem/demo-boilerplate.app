@@ -22,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Access.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/Access.php">
+      <file leaf-file-name="header-buttons.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/backend/access/includes/partials/header-buttons.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25773194">
-              <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.3104027">
+              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,16 +40,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/lang/en/validation.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/auth/passwords/change.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Frontend/User/ChangePassword.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Frontend/User/ChangePasswordRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/Auth/PasswordController.php" />
-        <option value="$PROJECT_DIR$/app/Services/Access/Traits/ChangePasswords.php" />
-        <option value="$PROJECT_DIR$/resources/views/frontend/user/profile/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Requests/Frontend/User/UpdateProfileRequest.php" />
-        <option value="$PROJECT_DIR$/app/Http/Routes/Frontend/Frontend.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/User/ProfileController.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/SessionGuard.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/index.blade.php" />
@@ -60,10 +50,8 @@
         <option value="$PROJECT_DIR$/app/Http/Routes/Backend/Access/Dashboard.php" />
         <option value="$PROJECT_DIR$/resources/views/frontend/layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/includes/heder.blade.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/labels.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/navs.php" />
-        <option value="$PROJECT_DIR$/resources/lang/en/menus.php" />
         <option value="$PROJECT_DIR$/config/backend.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/includes/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/includes/header.blade.php" />
@@ -88,9 +76,21 @@
         <option value="$PROJECT_DIR$/config/log-viewer.php" />
         <option value="$PROJECT_DIR$/app/Http/Routes/Backend/Access/LogViewer.php" />
         <option value="$PROJECT_DIR$/resources/views/vendor/log-viewer/show.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Access/User/UserController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/RouteNeedsPermission.php" />
+        <option value="$PROJECT_DIR$/config/access.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/labels.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/access/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Access/User/UserController.php" />
+        <option value="$PROJECT_DIR$/app/Http/breadcrumbs.php" />
+        <option value="$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access.php" />
+        <option value="$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/Role.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Access/Role/RoleController.php" />
+        <option value="$PROJECT_DIR$/resources/lang/en/menus.php" />
+        <option value="$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/Permission.php" />
+        <option value="$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/PermissionGroup.php" />
         <option value="$PROJECT_DIR$/app/Http/Routes/Backend/Access/Access.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/Access/Permission/PermissionGroupController.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/access/includes/partials/header-buttons.blade.php" />
       </list>
     </option>
   </component>
@@ -138,6 +138,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -153,6 +154,174 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="en" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -198,7 +367,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
+              <option name="myItemId" value="Repositories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -217,14 +386,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,28 +438,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Access" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo-boilerplate.app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo-boilerplate.app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Middleware" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,9 +523,132 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Role" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Permission" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Breadcrumbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo-boilerplate.app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Breadcrumbs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Access" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -458,17 +720,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35735965" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3679818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.405954" sideWeight="0.50574714" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.49425286" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49425286" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -497,132 +759,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.75">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.25">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/includes/nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.166667">
-          <caret line="48" column="113" selection-start-line="48" selection-start-column="99" selection-end-line="48" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-95.25">
-          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/frontend/layouts/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75">
-          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/labels.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="51" selection-start-line="63" selection-start-column="51" selection-end-line="63" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/roles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/DashboardController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/navs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.75">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hieu-le/active/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/hieu-le/active/src/Active.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-48.97222">
-          <caret line="222" column="20" selection-start-line="222" selection-start-column="20" selection-end-line="222" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/lang/en/menus.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/backend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.416667">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/footer.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16071428">
-          <caret line="4" column="113" selection-start-line="4" selection-start-column="113" selection-end-line="4" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/includes/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9241072">
-          <caret line="75" column="111" selection-start-line="75" selection-start-column="111" selection-end-line="75" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/lang/en/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7723214">
-          <caret line="777" column="0" selection-start-line="777" selection-start-column="0" selection-end-line="777" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.666667">
@@ -770,24 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/LogViewer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29858658">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/log-viewer/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.3355705">
           <caret line="244" column="32" selection-start-line="244" selection-start-column="32" selection-end-line="244" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Access/User/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67114097">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -808,13 +930,6 @@
     <entry file="file://$PROJECT_DIR$/app/Services/Access/Facades/Access.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Repositories/Backend/Access/User/EloquentUserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0268455">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -847,10 +962,460 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/access.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5872483">
+          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+          <folding>
+            <marker date="1470406860830" expanded="false" signature="9:91" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470406860830" expanded="true" signature="103:2971" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="110:247" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="322:410" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="465:680" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="739:820" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="880:998" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1055:1124" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1161:1198" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1215:1378" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1226:1325" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1387:1522" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1598:1673" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1722:1916" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="1990:2143" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="2228:2268" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="2285:2713" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="2407:2450" placeholder="..." />
+            <marker date="1470406860830" expanded="true" signature="2723:2914" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Backend/Access/User/UserRepositoryContract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22315437">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <marker date="1470229335536" expanded="true" signature="59:146" placeholder=" Interface UserRepositoryContract ..." />
+            <marker date="1470229335536" expanded="true" signature="181:1727" placeholder="{...}" />
+            <marker date="1470229335536" expanded="true" signature="191:266" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="344:479" placeholder=" @param $per_page ..." />
+            <marker date="1470229335536" expanded="true" signature="586:637" placeholder=" @param $per_page ..." />
+            <marker date="1470229335536" expanded="true" signature="705:790" placeholder=" @param string $order_by ..." />
+            <marker date="1470229335536" expanded="true" signature="868:964" placeholder=" @param $input ..." />
+            <marker date="1470229335536" expanded="true" signature="1033:1147" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="1221:1266" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="1311:1356" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="1400:1445" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="1490:1557" placeholder=" @param $id ..." />
+            <marker date="1470229335536" expanded="true" signature="1608:1674" placeholder=" @param $id ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/Backend/Access/User/EloquentUserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8020134">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+          <folding>
+            <marker date="1470229335535" expanded="false" signature="59:391" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="455:8927" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="509:652" placeholder=" EloquentRoleRepository constructor. ..." />
+            <marker date="1470229335535" expanded="true" signature="776:846" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="855:962" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="1030:1367" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="1060:1136" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1142:1203" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1235:1270" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1376:1511" placeholder=" @param $per_page ..." />
+            <marker date="1470229335535" expanded="true" signature="1608:1740" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="1683:1698" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1723:1732" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1749:1800" placeholder=" @param $per_page ..." />
+            <marker date="1470229335535" expanded="true" signature="1858:1940" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="1923:1932" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="1949:2034" placeholder=" @param string $order_by ..." />
+            <marker date="1470229335535" expanded="true" signature="2101:2181" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="2190:2356" placeholder=" @param $input ..." />
+            <marker date="1470229335535" expanded="true" signature="2415:3154" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="2496:3054" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="2942:3018" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="3163:3308" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="3372:3952" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="3512:3853" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="3961:4058" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="4108:4388" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="4246:4280" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="4397:4473" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="4508:4868" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="4547:4655" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="4736:4770" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="4877:4961" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="4995:5348" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="5209:5252" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="5274:5341" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="5357:5433" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="5468:5689" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="5555:5589" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="5698:5796" placeholder=" @param $id ..." />
+            <marker date="1470229335535" expanded="true" signature="5837:6263" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="5894:6006" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="6131:6165" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="6271:6324" placeholder=" @param $permissions ..." />
+            <marker date="1470229335535" expanded="true" signature="6385:6654" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="6567:6647" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="6662:6709" placeholder=" @param $roles ..." />
+            <marker date="1470229335535" expanded="true" signature="6758:6920" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="6928:6987" placeholder=" @param $roles ..." />
+            <marker date="1470229335535" expanded="true" signature="7038:7205" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="7095:7198" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="7213:7292" placeholder=" @param $input ..." />
+            <marker date="1470229335535" expanded="true" signature="7347:7685" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="7448:7678" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="7558:7668" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="7693:7866" placeholder=" Check to make sure at least one role is being applied or deactivate user ..." />
+            <marker date="1470229335535" expanded="true" signature="7923:8354" placeholder="{...}" />
+            <marker date="1470229335535" expanded="true" signature="7961:8347" placeholder="..." />
+            <marker date="1470229335535" expanded="true" signature="8362:8409" placeholder=" @param $input ..." />
+            <marker date="1470229335535" expanded="true" signature="8455:8925" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/labels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25167784">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <marker date="1470407721059" expanded="false" signature="9:92" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470407721059" expanded="true" signature="103:2049" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="120:284" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="140:277" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="163:266" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="304:1806" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="322:493" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="515:1242" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="540:763" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="837:1087" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="909:1072" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1154:1231" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1267:1332" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1352:1799" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1377:1701" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1730:1788" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1825:2046" placeholder="..." />
+            <marker date="1470407721059" expanded="true" signature="1876:1945" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/access/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5872483">
+          <caret line="14" column="73" selection-start-line="14" selection-start-column="73" selection-end-line="14" selection-end-column="73" />
+          <folding>
+            <marker date="1470407976067" expanded="true" signature="101:280" placeholder="..." />
+            <marker date="1470407976067" expanded="true" signature="133:278" placeholder="..." />
+            <marker date="1470407976067" expanded="true" signature="311:649" placeholder="..." />
+            <marker date="1470407976067" expanded="true" signature="344:647" placeholder="..." />
+            <marker date="1470407976067" expanded="true" signature="389:636" placeholder="..." />
+            <marker date="1470407976067" expanded="true" signature="526:621" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470229335484" expanded="true" signature="28:233" placeholder="..." />
+            <marker date="1470229335484" expanded="true" signature="78:232" placeholder="..." />
+            <marker date="1470229335484" expanded="true" signature="258:473" placeholder="..." />
+            <marker date="1470229335484" expanded="true" signature="311:472" placeholder="..." />
+            <marker date="1470229335484" expanded="true" signature="498:741" placeholder="..." />
+            <marker date="1470229335484" expanded="true" signature="561:740" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/LogViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Backend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470229335485" expanded="true" signature="9:92" placeholder=" Created by PhpStorm. ..." />
+            <marker date="1470229335485" expanded="true" signature="117:224" placeholder="..." />
+            <marker date="1470229335485" expanded="true" signature="159:223" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4194631">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <marker date="1470410651098" expanded="true" signature="9:91" placeholder=" Created by PhpStorm. ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/LogViewer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31711408">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <marker date="1470316032927" expanded="true" signature="19:1249" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="20:49" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="63:1248" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="79:213" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="85:212" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="233:638" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="234:264" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="277:637" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="297:452" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="302:451" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="477:630" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="487:629" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="658:1245" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="659:691" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="705:1244" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="725:869" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="731:868" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="891:1049" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="903:1048" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="1071:1237" placeholder="..." />
+            <marker date="1470316032927" expanded="true" signature="1082:1236" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/breadcrumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29362416">
+          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+          <folding>
+            <marker date="1470410573601" expanded="true" signature="9:91" placeholder=" Created by PhpStorm. ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Access/Permission/PermissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470412374502" expanded="false" signature="70:155" placeholder="..." />
+            <marker date="1470412374502" expanded="true" signature="202:1599" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="212:308" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470412374502" expanded="true" signature="338:361" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="370:474" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470412374502" expanded="true" signature="505:528" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="537:691" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470412374502" expanded="true" signature="737:760" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="769:886" placeholder=" Display the specified resource. ..." />
+            <marker date="1470412374502" expanded="true" signature="918:941" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="950:1085" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470412374502" expanded="true" signature="1117:1140" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="1149:1326" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470412374502" expanded="true" signature="1378:1401" placeholder="{...}" />
+            <marker date="1470412374502" expanded="true" signature="1410:1539" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470412374502" expanded="true" signature="1574:1597" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Access/Role/RoleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470411467837" expanded="false" signature="64:149" placeholder="..." />
+            <marker date="1470411467837" expanded="true" signature="190:1587" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="200:296" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470411467837" expanded="true" signature="326:349" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="358:462" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470411467837" expanded="true" signature="493:516" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="525:679" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470411467837" expanded="true" signature="725:748" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="757:874" placeholder=" Display the specified resource. ..." />
+            <marker date="1470411467837" expanded="true" signature="906:929" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="938:1073" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470411467837" expanded="true" signature="1105:1128" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="1137:1314" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470411467837" expanded="true" signature="1366:1389" placeholder="{...}" />
+            <marker date="1470411467837" expanded="true" signature="1398:1527" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470411467837" expanded="true" signature="1562:1585" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Access/User/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8137584">
+          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+          <folding>
+            <marker date="1470408970896" expanded="true" signature="64:358" placeholder="..." />
+            <marker date="1470408970896" expanded="true" signature="399:2535" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="409:450" placeholder=" @var UserRepositoryContract ..." />
+            <marker date="1470408970896" expanded="true" signature="483:524" placeholder=" @var RoleRepositoryContract ..." />
+            <marker date="1470408970896" expanded="true" signature="557:604" placeholder=" @var PermissionRepositoryContract ..." />
+            <marker date="1470408970896" expanded="true" signature="802:935" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="943:1039" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470408970896" expanded="true" signature="1069:1237" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="1155:1229" placeholder="..." />
+            <marker date="1470408970896" expanded="true" signature="1246:1350" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470408970896" expanded="true" signature="1381:1404" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="1413:1567" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470408970896" expanded="true" signature="1613:1636" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="1645:1762" placeholder=" Display the specified resource. ..." />
+            <marker date="1470408970896" expanded="true" signature="1794:1817" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="1826:1961" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470408970896" expanded="true" signature="1993:2016" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="2025:2202" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470408970896" expanded="true" signature="2254:2277" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="2286:2415" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470408970896" expanded="true" signature="2450:2473" placeholder="{...}" />
+            <marker date="1470408970896" expanded="true" signature="2508:2533" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33557048">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <marker date="1470411226425" expanded="true" signature="28:233" placeholder="..." />
+            <marker date="1470411226425" expanded="true" signature="79:232" placeholder="..." />
+            <marker date="1470411226425" expanded="true" signature="258:470" placeholder="..." />
+            <marker date="1470411226425" expanded="true" signature="310:469" placeholder="..." />
+            <marker date="1470411226425" expanded="true" signature="495:710" placeholder="..." />
+            <marker date="1470411226425" expanded="true" signature="550:709" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/lang/en/menus.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16778524">
+          <caret line="4" column="41" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <marker date="1470413197547" expanded="true" signature="14:1655" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="31:1314" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="51:1068" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="116:327" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="358:812" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="518:702" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="837:1057" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="1094:1203" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="1226:1307" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="1341:1653" placeholder="..." />
+            <marker date="1470413197547" expanded="true" signature="1392:1646" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/Permission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5033557">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding>
+            <marker date="1470413361088" expanded="true" signature="28:263" placeholder="..." />
+            <marker date="1470413361088" expanded="true" signature="91:262" placeholder="..." />
+            <marker date="1470413361088" expanded="true" signature="288:542" placeholder="..." />
+            <marker date="1470413361088" expanded="true" signature="352:541" placeholder="..." />
+            <marker date="1470413361088" expanded="true" signature="567:829" placeholder="..." />
+            <marker date="1470413361088" expanded="true" signature="636:828" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Breadcrumbs/Backend/Access/PermissionGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4194631">
+          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <marker date="1470413370346" expanded="true" signature="29:302" placeholder="..." />
+            <marker date="1470413370346" expanded="true" signature="100:301" placeholder="..." />
+            <marker date="1470413370346" expanded="true" signature="328:611" placeholder="..." />
+            <marker date="1470413370346" expanded="true" signature="405:610" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/Access/Permission/PermissionGroupController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5805369">
+          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
+          <folding>
+            <marker date="1470413784289" expanded="false" signature="70:155" placeholder="..." />
+            <marker date="1470413784289" expanded="true" signature="207:1659" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="217:313" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1470413784289" expanded="true" signature="343:366" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="375:479" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1470413784289" expanded="true" signature="510:533" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="542:696" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1470413784289" expanded="true" signature="742:765" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="774:891" placeholder=" Display the specified resource. ..." />
+            <marker date="1470413784289" expanded="true" signature="923:946" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="955:1090" placeholder=" Show the form for editing the specified resource. ..." />
+            <marker date="1470413784289" expanded="true" signature="1122:1145" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="1154:1331" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1470413784289" expanded="true" signature="1383:1406" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="1415:1544" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1470413784289" expanded="true" signature="1579:1602" placeholder="{...}" />
+            <marker date="1470413784289" expanded="true" signature="1636:1657" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Routes/Backend/Access/Access.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25773194">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.7214765">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding>
+            <marker date="1470413765717" expanded="true" signature="19:1633" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="20:144" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="157:1632" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="165:194" placeholder=" User Management ..." />
+            <marker date="1470413765717" expanded="true" signature="214:940" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="248:939" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="680:715" placeholder=" Specific User ..." />
+            <marker date="1470413765717" expanded="true" signature="739:932" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="801:931" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="951:980" placeholder=" Role Management ..." />
+            <marker date="1470413765717" expanded="true" signature="1000:1113" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="1034:1112" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="1124:1159" placeholder=" Permission Management ..." />
+            <marker date="1470413765717" expanded="true" signature="1179:1629" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="1238:1628" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="1451:1621" placeholder="..." />
+            <marker date="1470413765717" expanded="true" signature="1484:1620" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/access/includes/partials/header-buttons.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3104027">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -1,42 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\Role;
 
-use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
-use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
-use App\Repositories\Backend\Access\User\UserRepositoryContract;
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UserController extends Controller
+class RoleController extends Controller
 {
-    /**
-     * @var UserRepositoryContract
-     */
-    protected $users;
-
-    /**
-     * @var RoleRepositoryContract
-     */
-    protected $roles;
-
-    /**
-     * @var PermissionRepositoryContract
-     */
-    protected $permissions;
-
-    public function __construct(
-        UserRepositoryContract $users,
-        RoleRepositoryContract $roles,
-        PermissionRepositoryContract $permissions
-    )
-    {
-        $this->users        = $users;
-        $this->roles        =  $roles;
-        $this->permissions  = $permissions;
-    }
     /**
      * Display a listing of the resource.
      *
@@ -45,8 +17,6 @@ class UserController extends Controller
     public function index()
     {
         //
-        return view('backend.access.index')
-            ->withUsers($this->users->getUsersPaginated(config('access.users.default_per_page'),1));
     }
 
     /**
@@ -113,10 +83,5 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function deactivated()
-    {
-            
     }
 }

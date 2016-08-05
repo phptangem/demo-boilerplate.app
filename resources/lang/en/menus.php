@@ -3,6 +3,33 @@ return [
     'backend'=>[
         'access'=>[
             'title'=>'Access Management',
+            'roles'=>[
+                'all'=>'All Roles',
+                'create'=>'Create Roles',
+                'index'=>'All Roles',
+                'management'=>'Role Management',
+                'main'=>'Roles',
+            ],
+            'permissions'=>[
+                'all'=>'All Permissions',
+                'create'=>'Create Permission',
+                'edit'=>'Edit Permission',
+                'groups'=>[
+                    'all'=>'All Groups',
+                    'create'=>'Create Group',
+                    'edit'=>'Edit Group',
+                    'main'=>'Groups',
+                ],
+                'main'=>'Permissions',
+                'management'=>'Permissions Management',
+            ],
+            'users'=>[
+                'all'=>'All Users',
+                'create'=>'Create Users',
+                'deactivated'=>'Deactivated Users',
+                'deleted'=>'Deleted Users',
+                'main'=>'Users',
+            ],
         ],
         'log-viewer'=>[
             'dashboard'=>'Dashboard',
