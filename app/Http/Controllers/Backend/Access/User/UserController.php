@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Backend\Access\User;
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
 use App\Repositories\Backend\Access\User\UserRepositoryContract;
-//use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Backend\Access\User\CreateUserRequest;
+use App\Http\Requests\Backend\Access\User\StoreUserRequest;
 
 class UserController extends Controller
 {
@@ -54,9 +55,11 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(CreateUserRequest $request)
     {
-        //
+        return view('backend.access.create')
+            ->withRoles($this->roles->getAllRoles('sort','asc',true))
+            ->withPermissions($this->permissions->getAllPermissions());
     }
 
     /**
@@ -65,9 +68,15 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreUserRequest $request)
     {
-        //
+        $this->users->create(
+            $request->except('assignees_roles', 'permission_user'),
+            $request->only('assignees_roles'),
+            $request->only('permission_user')
+        );
+
+        return redirect()->route('admin.access.users.index')->withFlashSuccess(trans('alerts.backend.users.created'));
     }
 
     /**
@@ -117,6 +126,22 @@ class UserController extends Controller
 
     public function deactivated()
     {
-            
+            return view('backend.access.deactivated')
+                ->withUsers($this->users->getUsersPaginated(25,0));
+    }
+
+    public function deleted()
+    {
+        return view('backend.access.deleted')
+            ->withUsers($this->users->getDeletedUsersPaginated(25));
+    }
+    public function changePassword($id)
+    {
+
+    }
+
+    public function updatePassword($id)
+    {
+
     }
 }

@@ -19,6 +19,8 @@ Route::group([
          */
         Route::group(['prefix'=>'user/{id}','where'=>['id'=>'[0-9]+']], function(){
             Route::get('mark/{status}', 'UserController@mark')->name('admin.access.user.mark')->where('status','[0,1]');
+            Route::get('password/change', 'UserController@changePassword')->name('admin.access.user.change-password');
+            Route::post('password/change', 'UserController@updatePassword')->name('admin.access.user.change-password');
         });
     });
 
