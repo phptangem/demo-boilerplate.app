@@ -116,6 +116,11 @@ return [
         ],
         'backend'=>[
             'access'=>[
+                'roles'=>[
+                    'name'=>'Name',
+                    'associated_permissions'=>'Associated Permissions',
+                    'sort'=>'Sort',
+                ],
                 'users'=>[
                     'active'=>'Active',
                     'associated_roles'=>'Associated Roles',

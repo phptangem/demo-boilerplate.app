@@ -36,7 +36,7 @@ trait RoleAttribute
      */
     public function getActionButtonsAttribute()
     {
-        return $this->getEditButtonAttribute().
+        return $this->getEditButtonAttribute().' '.
         $this->getDeleteButtonAttribute();
     }
 }

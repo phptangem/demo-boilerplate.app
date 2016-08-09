@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backend\Access\Role;
 
+use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
+use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -10,13 +12,31 @@ use App\Http\Controllers\Controller;
 class RoleController extends Controller
 {
     /**
+     * @var RoleRepositoryContract
+     */
+    protected $roles;
+    /**
+     * @var PermissionRepositoryContract
+     */
+    protected $permissions;
+
+    public function __construct(
+        RoleRepositoryContract  $roles,
+        PermissionRepositoryContract $permissions
+    )
+    {
+        $this->roles        = $roles;
+        $this->permissions  = $permissions;
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view('backend.access.roles.index')
+            ->withRoles($this->roles->getRolesPaginated(50));
     }
 
     /**
@@ -26,7 +46,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.access.roles.create');
     }
 
     /**

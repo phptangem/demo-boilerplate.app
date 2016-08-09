@@ -8,6 +8,16 @@
 return [
     'backend'=>[
         'access'=>[
+            'roles'=>[
+                'create'=>'Create Role',
+                'management'=>'Role Management',
+                'table'=>[
+                    'role'=>'Role',
+                    'permissions'=>'Permissions',
+                    'number_of_users'=>'Number of Users',
+                    'sort'=>'Sort',
+                ],
+            ],
             'users'=>[
                 'active'=>'Active Users',
                 'all_permissions'=>'All Permissions',
@@ -84,11 +94,13 @@ return [
         ],
     ],
     'general'=>[
+        'all'=>'All',
         'actions'=>'Actions',
         'buttons'=>[
             'save'=>'Save',
             'update'=>'Update',
         ],
+        'custom'=>'Custom',
         'hide'=>'Hide',
         'no'=>'No',
         'none'=>'None',
