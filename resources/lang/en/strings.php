@@ -31,6 +31,11 @@ return [
     ],
 
     'backend'=>[
+        'access'=>[
+            'users'=>[
+                'if_confirmed_off'=>'If confirmed is off',
+            ],
+        ],
         'dashboard'=>[
             'title' => 'Administrative Dashboard',
             'welcome' => 'Welcome',

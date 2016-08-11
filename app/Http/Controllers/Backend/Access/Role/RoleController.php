@@ -1,41 +1,31 @@
 <?php
 
-namespace App\Http\Controllers\Backend\Access\User;
+namespace App\Http\Controllers\Backend\Access\Role;
 
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
-use App\Repositories\Backend\Access\User\UserRepositoryContract;
+use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Backend\Access\User\CreateUserRequest;
-use App\Http\Requests\Backend\Access\User\StoreUserRequest;
 
-class UserController extends Controller
+class RoleController extends Controller
 {
-    /**
-     * @var UserRepositoryContract
-     */
-    protected $users;
-
     /**
      * @var RoleRepositoryContract
      */
     protected $roles;
-
     /**
      * @var PermissionRepositoryContract
      */
     protected $permissions;
 
     public function __construct(
-        UserRepositoryContract $users,
-        RoleRepositoryContract $roles,
+        RoleRepositoryContract  $roles,
         PermissionRepositoryContract $permissions
     )
     {
-        $this->users        = $users;
-        $this->roles        =  $roles;
+        $this->roles        = $roles;
         $this->permissions  = $permissions;
     }
     /**
@@ -45,9 +35,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
-        return view('backend.access.index')
-            ->withUsers($this->users->getUsersPaginated(config('access.users.default_per_page'),1));
+        return view('backend.access.roles.index')
+            ->withRoles($this->roles->getRolesPaginated(50));
     }
 
     /**
@@ -55,11 +44,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(CreateUserRequest $request)
+    public function create()
     {
-        return view('backend.access.create')
-            ->withRoles($this->roles->getAllRoles('sort','asc',true))
-            ->withPermissions($this->permissions->getAllPermissions());
+        return view('backend.access.roles.create');
     }
 
     /**
@@ -68,15 +55,9 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreUserRequest $request)
+    public function store(Request $request)
     {
-        $this->users->create(
-            $request->except('assignees_roles', 'permission_user'),
-            $request->only('assignees_roles'),
-            $request->only('permission_user')
-        );
-
-        return redirect()->route('admin.access.users.index')->withFlashSuccess(trans('alerts.backend.users.created'));
+        //
     }
 
     /**
@@ -122,26 +103,5 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function deactivated()
-    {
-            return view('backend.access.deactivated')
-                ->withUsers($this->users->getUsersPaginated(25,0));
-    }
-
-    public function deleted()
-    {
-        return view('backend.access.deleted')
-            ->withUsers($this->users->getDeletedUsersPaginated(25));
-    }
-    public function changePassword($id)
-    {
-
-    }
-
-    public function updatePassword($id)
-    {
-
     }
 }

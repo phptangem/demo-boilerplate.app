@@ -119,7 +119,7 @@ trait UserAttribute
                 break;
             case 1:
                 if(access()->allow('deactivate-users')){
-                    return '< a href="'.route('admin.access.user.mark', [$this->id, 0]) . '" class="btn btn-xs btn-warning"><i class="fa fa-pause" data-toggle="tooltip" data-placement="top" title='.trans('buttons.backend.access.users.deactivate').'"></i></a>';
+                    return '<a href="'.route('admin.access.user.mark', [$this->id, 0]) . '" class="btn btn-xs btn-warning"><i class="fa fa-pause" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.deactivate'). '"></i></a> ';
                 }
 
                 break;

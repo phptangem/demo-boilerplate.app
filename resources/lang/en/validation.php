@@ -114,6 +114,26 @@ return [
             'password_confirmation'=>'Password Confirmation',
             'new_password_confirmation'=>'New Password Confirmation',
         ],
+        'backend'=>[
+            'access'=>[
+                'roles'=>[
+                    'name'=>'Name',
+                    'associated_permissions'=>'Associated Permissions',
+                    'sort'=>'Sort',
+                ],
+                'users'=>[
+                    'active'=>'Active',
+                    'associated_roles'=>'Associated Roles',
+                    'confirmed'=>'Confirmed',
+                    'email'=>'E-mail Address',
+                    'name'=>'Name',
+                    'other_permissions'=>'Other Permissions',
+                    'password'=>'Password',
+                    'password_confirmation'=>'Password Confirmation',
+                    'send_confirmation_email'=>'Send Confirmation Email',
+                ],
+            ],
+        ],
     ],
 
 ];
