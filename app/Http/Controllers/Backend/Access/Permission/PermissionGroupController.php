@@ -16,7 +16,6 @@ class PermissionGroupController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -26,7 +25,7 @@ class PermissionGroupController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.access.roles.permissions.groups.create');
     }
 
     /**

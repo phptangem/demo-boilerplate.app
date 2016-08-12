@@ -55,7 +55,7 @@ trait PermissionAttribute
     /**
      * @return string
      */
-    public function getActionButtonAttribute()
+    public function getActionButtonsAttribute()
     {
         $buttons = '';
         $buttons .= $this->getEditButtonAttribute();

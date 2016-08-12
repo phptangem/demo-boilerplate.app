@@ -98,7 +98,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = $this->users->findOrThrowException($id, true);
+        return view('backend.access.edit')
+            ->withUser($user)
+            ->withUserRoles($user->roles->lists('id')->all())
+            ->withRoles($this->roles->getAllRoles('sort', 'asc', true))
+            ->withUserPermissions($user->permissions->lists('id')->all())
+            ->withPermissions($this->permissions->getAllPermissions());
     }
 
     /**

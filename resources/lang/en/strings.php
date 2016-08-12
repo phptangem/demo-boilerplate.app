@@ -35,6 +35,10 @@ return [
             'users'=>[
                 'if_confirmed_off'=>'If confirmed is off',
             ],
+            'permissions'=>[
+                'edit_explanation'=>'If you performed operations in the hierarchy section without refreshing this page, you will need to refresh to reflect the changes here.',
+                'sort_explanation'=>'This section allows you to organize your permissions into groups to stay organized. Regardless of the group, the permissions are still individually assigned to each role.',
+            ],
         ],
         'dashboard'=>[
             'title' => 'Administrative Dashboard',

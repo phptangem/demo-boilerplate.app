@@ -44,6 +44,7 @@ class EloquentPermissionGroupRepository implements PermissionGroupRepositoryCont
         }
 
         return PermissionGroup::with('children', 'permissions')
+            ->whereNull('parent_id')
             ->orderBy('sort', 'asc')
             ->get();
     }
