@@ -41,7 +41,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->confirmed_label }}</td>
+                                    <td>{!!  $user->confirmed_label !!} </td>
                                     <td>
                                         @if($user->roles()->count())
                                             @foreach($user->roles as $role)

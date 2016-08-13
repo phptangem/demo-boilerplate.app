@@ -21,8 +21,10 @@ return [
             'users'=>[
                 'change_password'=>'Change Password',
                 'deactivate'=>'Deactivate',
+                'delete_permanently'=>'Delete Permanently',
                 'activate'=>'Activate',
                 'resend_email'=>'Resend Confirmation E-mail',
+                'restore_user'=>'Restore User',
             ],
         ],
     ],

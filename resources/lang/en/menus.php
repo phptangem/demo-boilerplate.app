@@ -6,6 +6,7 @@ return [
             'roles'=>[
                 'all'=>'All Roles',
                 'create'=>'Create Roles',
+                'edit'=>'Edit Role',
                 'index'=>'All Roles',
                 'management'=>'Role Management',
                 'main'=>'Roles',

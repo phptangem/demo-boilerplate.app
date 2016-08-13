@@ -51,14 +51,14 @@
                                 <td>
                                     @if($user->permissions()->count() > 0)
                                         @foreach($user->permissions as $perm)
-                                            {{ $perm->display_name }}<br />
+                                            {!! $perm->display_name !!}<br/>
                                         @endforeach
                                     @else
                                         {{ trans('labels.general.none') }}
                                     @endif
                                 </td>
-                                <td>{{ $user->created_at->diffForHumans() }}</td>
-                                <td>{{ $user->updated_at->diffForHumans() }}</td>
+                                <td class="visible-lg">{{ $user->created_at->diffForHumans() }}</td>
+                                <td class="visible-lg">{{ $user->updated_at->diffForHumans() }}</td>
                                 <td>{!! $user->action_buttons !!}</td>
                             </tr>
                         @endforeach

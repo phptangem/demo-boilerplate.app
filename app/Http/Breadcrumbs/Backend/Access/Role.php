@@ -8,6 +8,6 @@ Breadcrumbs::register('admin.access.roles.create', function($breadcrumbs){
     $breadcrumbs->push(trans('menus.backend.access.roles.create'), route('admin.access.roles.create'));
 });
 Breadcrumbs::register('admin.access.roles.edit', function($breadcrumbs, $id){
-    $breadcrumbs::parent('admin.access.roles.index');
+    $breadcrumbs->parent('admin.access.roles.index');
     $breadcrumbs->push(trans('menus.backend.access.roles.edit'), route('admin.access.roles.edit',$id));
 });

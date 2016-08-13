@@ -20,6 +20,8 @@ Route::group([
         Route::group(['prefix'=>'user/{id}','where'=>['id'=>'[0-9]+']], function(){
             Route::get('mark/{status}', 'UserController@mark')->name('admin.access.user.mark')->where('status','[0,1]');
             Route::get('password/change', 'UserController@changePassword')->name('admin.access.user.change-password');
+            Route::get('restore','UserController@restore')->name('admin.access.user.restore');
+            Route::get('delete','UserController@delete')->name('admin.access.user.delete-permanently');
             Route::post('password/change', 'UserController@updatePassword')->name('admin.access.user.change-password');
         });
     });

@@ -11,9 +11,11 @@ return [
             'roles'=>[
                 'create'=>'Create Role',
                 'management'=>'Role Management',
+                'edit'=>'Edit Role',
                 'table'=>[
                     'role'=>'Role',
                     'permissions'=>'Permissions',
+                    'management'=>'Role Management',
                     'number_of_users'=>'Number of Users',
                     'sort'=>'Sort',
                 ],
@@ -21,6 +23,7 @@ return [
             'permissions'=>[
                 'create'=>'Create Permission',
                 'group'=>'Group',
+                'grouped_permissions'=>'Grouped Permissions',
                 'groups'=>[
                     'create'=>'Create Group',
                     'table'=>[
@@ -48,6 +51,8 @@ return [
                     'total' => 'permission total|permissions total',
                     'users' => 'Users',
                 ],
+                'ungrouped_permissions'=>'Ungrouped Permissions',
+                'no_ungrouped'=>'There are no ungrouped permissions.',
             ],
             'users'=>[
                 'active'=>'Active Users',

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Backend\Access\Role;
 
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
+use App\Repositories\Backend\Access\Permission\Group\PermissionGroupRepositoryContract;
+use App\Http\Requests\Backend\Access\Role\EditRoleRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -77,9 +79,14 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, PermissionGroupRepositoryContract $group, EditRoleRequest $request)
     {
-        //
+        $role = $this->roles->findOrThrowException($id, true);
+        return view('backend.access.roles.edit')
+            ->withRole($role)
+            ->withRolePermissions($role->permissions->lists('id')->all())
+            ->withGroups($group->getAllGroups())
+            ->withPermissions($this->permissions->getUngroupedPermissions());
     }
 
     /**

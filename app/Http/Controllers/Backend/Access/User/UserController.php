@@ -12,6 +12,7 @@ use App\Http\Requests\Backend\Access\User\CreateUserRequest;
 use App\Http\Requests\Backend\Access\User\StoreUserRequest;
 use App\Http\Requests\Backend\Access\User\ChangeUserPasswordRequest;
 use App\Http\Requests\Backend\Access\User\MarkUserRequest;
+use App\Http\Requests\Backend\Access\User\PermanentlyDeleteUserRequest;
 class UserController extends Controller
 {
     /**
@@ -79,7 +80,7 @@ class UserController extends Controller
 
         return redirect()->route('admin.access.users.index')->withFlashSuccess(trans('alerts.backend.users.created'));
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -128,15 +129,27 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $this->users->destroy($id);
+        return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.deleted'));
     }
 
+    public function restore($id)
+    {
+        $this->users->restore($id);
+        return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.restored'));
+    }
     public function deactivated()
     {
             return view('backend.access.deactivated')
                 ->withUsers($this->users->getUsersPaginated(25,0));
     }
 
+    public function delete($id, PermanentlyDeleteUserRequest $request)
+    {
+        $this->users->delete($id);
+
+        return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.deleted_permanently'));
+    }
     public function deleted()
     {
         return view('backend.access.deleted')
