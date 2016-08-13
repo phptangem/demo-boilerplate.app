@@ -10,7 +10,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Backend\Access\User\CreateUserRequest;
 use App\Http\Requests\Backend\Access\User\StoreUserRequest;
-
+use App\Http\Requests\Backend\Access\User\ChangeUserPasswordRequest;
+use App\Http\Requests\Backend\Access\User\MarkUserRequest;
 class UserController extends Controller
 {
     /**
@@ -98,7 +99,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = $this->users->findOrThrowException($id, true);
+        return view('backend.access.edit')
+            ->withUser($user)
+            ->withUserRoles($user->roles->lists('id')->all())
+            ->withRoles($this->roles->getAllRoles('sort', 'asc', true))
+            ->withUserPermissions($user->permissions->lists('id')->all())
+            ->withPermissions($this->permissions->getAllPermissions());
     }
 
     /**
@@ -135,11 +142,18 @@ class UserController extends Controller
         return view('backend.access.deleted')
             ->withUsers($this->users->getDeletedUsersPaginated(25));
     }
-    public function changePassword($id)
+    public function changePassword($id, ChangeUserPasswordRequest $request)
     {
-
+        return view('backend.access.change-password')
+            ->withUser($this->users->findOrThrowException($id));
     }
 
+    public function mark($id,$status, MarkUserRequest $request)
+    {
+        $this->users->mark($id, $status);
+
+        return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.updated'));
+    }
     public function updatePassword($id)
     {
 

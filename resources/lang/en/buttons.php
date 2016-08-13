@@ -21,6 +21,7 @@ return [
             'users'=>[
                 'change_password'=>'Change Password',
                 'deactivate'=>'Deactivate',
+                'activate'=>'Activate',
                 'resend_email'=>'Resend Confirmation E-mail',
             ],
         ],

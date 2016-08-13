@@ -23,7 +23,7 @@ trait PermissionRelationship
      */
     public function group()
     {
-        return $this->belongsTo(cofig('access.group'),'group_id');
+        return $this->belongsTo(config('access.group'),'group_id');
     }
 
     /**

@@ -42,7 +42,7 @@
                                     <td>{{ $user->id }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{!! link_to("mailto:".$user->email, $user->email) !!}</td>
-                                    <td>{{ $user->confirmed_label }}</td>
+                                    <td>{!! $user->confirmed_label !!}</td>
                                     <td>
                                         @if($user->roles()->count() > 0)
                                             @foreach($user->roles as $role)
@@ -62,8 +62,8 @@
                                         @endif
                                     </td>
                                     <td>{{ $user->created_at->diffForHumans() }}</td>
-                                    <td>{{ $user->last_updated->diffForHumans() }}</td>
-                                    <td>{{ $user->action_buttons }}</td>
+                                    <td>{{ $user->updated_at->diffForHumans() }}</td>
+                                    <td>{!! $user->action_buttons !!}</td>
                                 </tr>
                             @endforeach
                         @else

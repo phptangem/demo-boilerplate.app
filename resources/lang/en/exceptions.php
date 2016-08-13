@@ -46,6 +46,7 @@ return [
                 'delete_error'=>'There was a problem deleting this user.Please try again.',
                 'email_error'=>'That email address belongs to a different user.',
                 'cant_delete_self'=>'You can not delete yourself',
+                'cant_deactivate_self'=>'You can not deactivate yourself',
                 'mark_error'=>'There was a problem updating user,Please try again.',
                 'role_needed'=>'You must choose at least one role',
                 'role_needed_created' =>'You must choose at least one role. User has been created but deactivate',

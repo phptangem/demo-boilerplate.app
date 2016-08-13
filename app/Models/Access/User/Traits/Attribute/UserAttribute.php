@@ -113,7 +113,7 @@ trait UserAttribute
         switch($this->status){
             case 0:
                 if(access()->allow('reactive-users')){
-                    return '< a href="'.route('admin.access.user.mark', [$this->id, 1]) . '" class="btn btn-xs btn-success"><i class="fa fa-play" data-toggle="tooltip" data-placement="top" title='.trans('buttons.backend.access.users.activate').'"></i></a>';
+                    return '<a href="'.route('admin.access.user.mark', [$this->id, 1]) . '" class="btn btn-xs btn-success"><i class="fa fa-play" data-toggle="tooltip" data-placement="top" title="'.trans('buttons.backend.access.users.activate').'"></i></a>';
                 }
 
                 break;
@@ -170,7 +170,7 @@ trait UserAttribute
         return $this->getEditButtonAttribute().
         $this->getChangePasswordButtonAttribute(). ' '.
         $this->getStatusButtonAttribute().
-        $this->getConfirmedButtonAttribute().
+        $this->getConfirmedButtonAttribute().' '.
         $this->getDeleteButtonAttribute();
     }
 }

@@ -45,6 +45,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if($e instanceof GeneralException){
+            return redirect()->back()->withInput()->withFlashDanger($e->getMessage());
+        }
         return parent::render($request, $e);
     }
 }

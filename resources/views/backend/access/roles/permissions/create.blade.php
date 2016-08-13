@@ -1,0 +1,156 @@
+@extends('backend.layouts.master')
+
+@section('title', trans('labels.backend.access.permissions.management').' | '.trans('labels.backend.access.permissions.create'))
+
+@section('page-header')
+    <h1>
+        {{ trans('labels.backend.access.permissions.management') }}
+        <small>{{ trans('labels.backend.access.permissions.create') }}</small>
+    </h1>
+@endsection
+
+@section('content')
+    {!! Form::open(['route'=>'admin.access.roles.permissions.store', 'class'=>'form-horizontal', 'method'=>'post']) !!}
+        <div class="box box-success">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ trans('labels.backend.access.permissions.create') }}</h3>
+
+                <div class="box-tools pull-right">
+                    @include('backend.access.includes.partials.header-buttons')
+                </div>
+            </div>
+
+            <div class="box-body">
+                <div>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#general" aria-controls="general" role="tab" data-toggle="tab">
+                                {{ trans('labels.backend.access.permissions.tabs.general') }}
+                            </a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#dependencies" aria-controls="dependencies" role="tab" data-toggle="tab">
+                                {{ trans('labels.backend.access.permissions.tabs.dependencies') }}
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="general" style="padding-top:20px">
+                            <div class="form-group">
+                                {!! Form::label('name', trans('validation.attributes.backend.access.permissions.name'),['class'=>'col-lg-2 control-label']) !!}
+                                <div class="col-lg-10">
+                                    {!! Form::text('name',null,['class'=>'form-control','placeholder'=>trans('validation.attributes.backend.access.permissions.name')]) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('display_name', trans('validation.attributes.backend.access.permissions.display_name'), ['class'=>'control-label col-lg-2']) !!}
+                                <div class="col-lg-10">
+                                    {!! Form::text('display_name',null,['class'=>'form-control','placeholder'=>trans('validation.attributes.backend.access.permissions.display_name')]) !!}
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ Form::label('group',trans('validation.attributes.backend.access.permissions.group'), ['class'=>'control-label col-lg-2']) }}
+                                <div class="col-lg-10">
+                                    <select name="group" id="" class="form-control">
+                                        <option value="">{{ trans('labels.general.none') }}</option>
+                                        @foreach($groups as $group)
+                                            <option value="{{$group->id}}">{!! $group->name !!}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('sort', trans('validation.attributes.backend.access.permissions.group_sort'),['class'=>'col-lg-2 control-label']) !!}
+                                <div class="col-lg-10">
+                                    {!! Form::text('sort', null, ['class'=>'form-control', 'placeholder'=>trans('validation.attributes.backend.access.permissions.group_sort')]) !!}
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-lg-2 control-label">{{ trans('validation.attributes.backend.access.permissions.associated_roles') }}</label>
+                                <div class="col-lg-10">
+                                    @if(count($roles) > 0)
+                                        @foreach($roles as $role)
+                                            <input type="checkbox"  {{ $role->id == 1 ? 'disabled checked' :'' }} value="{{$role->id}}" name="permission_roles[]" id="role-{{$role->id}}" />
+                                            <label for="role-{{$role->id}}">{{ $role->name }}</label><br/>
+                                        @endforeach
+                                    @else
+                                        {{ trans('labels.backend.permissions.no_roles') }}
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-lg-2 control-label">{{ trans('validation.attributes.backend.access.permissions.system') }}</label>
+                                <div class="col-lg-10">
+                                    <input type="checkbox" name="system" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane" id="dependencies" style="padding-top:20px" role="tabpanel">
+
+                            <div class="alert alert-info">
+                                <i class="fa fa-info circle"></i>
+                                {!! getLanguageBlock('backend.lang.access.roles.permissions.dependencies-explanation') !!}
+                            </div>
+
+                            <div class="form-group">
+                                <label for="" class="col-lg-2 control-label">{{ trans('validation.attributes.backend.access.permissions.dependencies') }}</label>
+                                <div class="col-lg-1o">
+                                    @if(count($permissions) > 0)
+                                        @foreach(array_chunk($permissions->toArray(), 10) as $perm)
+                                            <div class="col-lg-3">
+                                                <ul style="margin:0;padding:0;list-style: none;">
+                                                    @foreach($perm as $p)
+                                                        <?php
+                                                            $dependencies = [];
+                                                            $dependencies_list = [];
+                                                            if(count($p['dependencies'])){
+                                                                foreach($p['dependencies'] as $dependency){
+                                                                    array_push($dependencies, $dependency['dependency_id']);
+                                                                    array_push($dependencies_list, $dependency['permission']['display_name']);
+                                                                }
+                                                            }
+                                                            $dependencies =json_encode($dependencies);
+                                                            $dependency_list = implode(', ',$dependencies_list);
+                                                        ?>
+                                                        <li>
+                                                            <input type="checkbox" value="{{$p['id']}}" name="dependencies[]" data-dependencies="{!! $dependencies !!}" id="permission-{{$p['id']}}" /> <label
+                                                                    for="permission-{{$p['id']}}">
+                                                                @if($p['dependencies'])
+                                                                    <a style="color:black;text-decoration:none;" data-toggle="tooltip" data-html="true" title="<strong>{{ trans('labels.backend.access.permissions.dependencies') }}:</strong> {!! $dependency_list !!}">{!! $p['display_name'] !!} <small><strong>(D)</strong></small></a>
+                                                                @else
+                                                                    {!! $p['display_name'] !!}
+                                                                @endif
+                                                            </label>
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endforeach
+                                    @else
+                                        {{ trans('labels.backend.access.permissions.no_permissions') }}
+                                    @endif
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box box-success">
+                <div class="box-body">
+                    <div class="pull-left">
+                        <a href="{{route('admin.access.roles.permissions.index')}}" class="btn btn-danger btn-xs">{{ trans('buttons.general.cancel') }}</a>
+                    </div>
+                    <div class="pull-right">
+                        <input type="submit" class="btn btn-success btn-xs" value="{{trans('buttons.general.crud.create')}}">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    {!! Form::close() !!}
+@endsection
