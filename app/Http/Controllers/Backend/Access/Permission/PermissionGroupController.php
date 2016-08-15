@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backend\Access\Permission;
 
+use App\Http\Requests\Backend\Aceess\Permission\Group\EditPermissionGroupRequest;
+use App\Repositories\Backend\Access\Permission\Group\PermissionGroupRepositoryContract;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -9,6 +11,12 @@ use App\Http\Controllers\Controller;
 
 class PermissionGroupController extends Controller
 {
+    protected $groups;
+
+    public function __construct(PermissionGroupRepositoryContract $groups)
+    {
+        $this->groups = $groups;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -56,9 +64,10 @@ class PermissionGroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, EditPermissionGroupRequest $request)
     {
-        //
+        return view('backend.access.roles.permissions.groups.edit')
+            ->withGroup($this->groups->find($id));
     }
 
     /**

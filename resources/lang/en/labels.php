@@ -27,6 +27,7 @@ return [
                 'grouped_permissions'=>'Grouped Permissions',
                 'groups'=>[
                     'create'=>'Create Group',
+                    'edit'=>'Edit Group',
                     'table'=>[
                         'name'=>'Name',
                     ],
