@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Backend\Access\Role;
+namespace App\Http\Requests\Backend\Access\Permission;
 
 use App\Http\Requests\Request;
 
-class DeleteRoleRequest extends Request
+class DeletePermissionRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class DeleteRoleRequest extends Request
      */
     public function authorize()
     {
-        return access()->allow('delete-roles');
+        return false;
     }
 
     /**

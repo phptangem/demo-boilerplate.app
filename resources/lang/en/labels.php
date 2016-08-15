@@ -22,6 +22,7 @@ return [
             ],
             'permissions'=>[
                 'create'=>'Create Permission',
+                'edit'=>'Edit Permission',
                 'group'=>'Group',
                 'grouped_permissions'=>'Grouped Permissions',
                 'groups'=>[

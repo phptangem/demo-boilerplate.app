@@ -5,6 +5,11 @@ namespace App\Http\Controllers\Backend\Access\Permission;
 use App\Repositories\Backend\Access\Permission\Group\PermissionGroupRepositoryContract;
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
+use App\Http\Requests\Backend\Access\Permission\CreatePermissionRequest;
+use App\Http\Requests\Backend\Access\Permission\DeletePermissionRequest;
+use App\Http\Requests\Backend\Access\Permission\StorePermissionRequest;
+use App\Http\Requests\Backend\Access\Permission\UpdatePermissionRequest;
+use App\Http\Requests\Backend\Access\Permission\EditPermissionRequest;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -82,9 +87,17 @@ class PermissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, EditPermissionRequest $request)
     {
-        //
+        $permission = $this->permissions->findOrThrowException($id);
+
+        return view('backend.access.roles.permissions.edit')
+            ->withPermission($permission)
+            ->withRoles($this->roles->getAllRoles())
+            ->withGroups($this->groups->getAllGroups())
+            ->withPermissionRoles($permission->roles->lists('id')->all())
+            ->withPermissions($this->permissions->getAllPermissions())
+            ->withPermissionDependencies($permission->dependencies->lists('dependency_id')->all());
     }
 
     /**

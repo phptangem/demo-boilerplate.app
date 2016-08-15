@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Http\Requests\Backend\Access\Role\DeleteRoleRequest;
 class RoleController extends Controller
 {
     /**
@@ -107,8 +107,9 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id,DeleteRoleRequest $request)
     {
-        //
+        $this->roles->destroy($id);
+        return redirect()->back()->withFlashSuccess(trans('alerts.access.roles.deleted'));
     }
 }
