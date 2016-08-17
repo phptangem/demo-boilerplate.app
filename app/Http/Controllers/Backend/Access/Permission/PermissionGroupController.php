@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers\Backend\Access\Permission;
 
-use App\Http\Requests\Backend\Aceess\Permission\Group\EditPermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\EditPermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\SortPermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\StorePermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\UpdatePermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\CreatePermissionGroupRequest;
+use App\Http\Requests\Backend\Access\Permission\Group\DeletePermissionGroupRequest;
 use App\Repositories\Backend\Access\Permission\Group\PermissionGroupRepositoryContract;
 use Illuminate\Http\Request;
 
@@ -31,7 +36,7 @@ class PermissionGroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(CreatePermissionGroupRequest $request)
     {
         return view('backend.access.roles.permissions.groups.create');
     }
@@ -42,7 +47,7 @@ class PermissionGroupController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePermissionGroupRequest $request)
     {
         //
     }
@@ -77,7 +82,7 @@ class PermissionGroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id, UpdatePermissionGroupRequest $request)
     {
         //
     }
@@ -88,12 +93,12 @@ class PermissionGroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, DeletePermissionGroupRequest $request)
     {
         //
     }
 
-    public function updateSort()
+    public function updateSort(StorePermissionGroupRequest $request)
     {
         
     }

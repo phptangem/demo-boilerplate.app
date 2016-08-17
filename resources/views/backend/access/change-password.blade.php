@@ -23,14 +23,14 @@
             <div class="form-group">
                 {!! Form::label('password', trans('validation.attributes.backend.access.users.password'), ['class'=>'col-lg-2 control-label' ]) !!}
                 <div class="col-lg-10">
-                    {{ Form::text('password', null,['class'=>'form-control']) }}
+                    {{ Form::password('password', ['class'=>'form-control']) }}
                 </div>
             </div>
 
             <div class="form-group">
                 {!! Form::label('password_confirmation', trans('validation.attributes.backend.access.users.password_confirmation'), ['class'=>'col-lg-2 control-label' ]) !!}
                 <div class="col-lg-10">
-                    {{ Form::text('password_confirmation', null,['class'=>'form-control']) }}
+                    {{ Form::password('password_confirmation', ['class'=>'form-control']) }}
                 </div>
             </div>
         </div>

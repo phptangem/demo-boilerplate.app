@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Backend\Access\User;
+namespace App\Http\Requests\Backend\Access\Permission\Group;
 
 use App\Http\Requests\Request;
 
-class RestoreUserRequest extends Request
+class SortPermissionGroupRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class RestoreUserRequest extends Request
      */
     public function authorize()
     {
-        return access()->allow('restore-users');
+        return false;
     }
 
     /**

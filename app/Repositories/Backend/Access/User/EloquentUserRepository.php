@@ -246,7 +246,7 @@ class EloquentUserRepository implements UserRepositoryContract
     private function flushPermissions($permissions, $user)
     {
         //Flush permissions out,then add array of new ones if any
-        $user->deatchPermissions($user->permissions);
+        $user->detachPermissions($user->permissions);
         if(count($permissions['permission_user']) > 0){
             $user->attachPermissions($permissions['permission_user']);
         }

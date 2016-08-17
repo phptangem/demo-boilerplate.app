@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Backend\Access\Role;
 
+use App\Http\Requests\Backend\Access\Role\UpdateRoleRequest;
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
 use App\Repositories\Backend\Access\Permission\Group\PermissionGroupRepositoryContract;
@@ -96,9 +97,10 @@ class RoleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id, UpdateRoleRequest $request)
     {
-        //
+        $this->roles->update($id, $request->all());
+        return redirect()->route('admin.access.roles.index')->withFlashSuccess(trans('alerts.backend.roles.updated'));
     }
 
     /**

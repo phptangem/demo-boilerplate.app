@@ -34,6 +34,7 @@ return [
         'access'=>[
             'users'=>[
                 'if_confirmed_off'=>'If confirmed is off',
+                'delete_user_confirm'=>'Are you sure you want to delete this user permanently? Anywhere in the application that references this user\'s id will most likely error . Proceed at your own risk . This can not be un - done .',
             ],
             'permissions'=>[
                 'edit_explanation'=>'If you performed operations in the hierarchy section without refreshing this page, you will need to refresh to reflect the changes here.',
@@ -46,6 +47,7 @@ return [
         ],
         'general'=>[
             'all_rights_reserved'=>'All Rights Reserved.',
+            'continue' => 'Continue',
             'are_you_sure'=>'Are you sure?',
             'boilerplate_link'=>'Laravel 5 Boilerplate',
             'member_since'=>'Member since',

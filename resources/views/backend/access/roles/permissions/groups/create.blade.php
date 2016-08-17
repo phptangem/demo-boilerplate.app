@@ -1,6 +1,6 @@
 @extends('backend.layouts.master')
 
-@section('title', trans('labels.backend.access.permissions.management') .' | '.trans('labels.backend.access.permissions.groups.create'));
+@section('title', trans('labels.backend.access.permissions.management') .' | '.trans('labels.backend.access.permissions.groups.create'))
 
 @section('page-header')
     <h1>

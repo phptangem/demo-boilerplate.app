@@ -27,6 +27,7 @@ return [
             'users'=>[
                 'all'=>'All Users',
                 'create'=>'Create Users',
+                'change-password'=>'Change Password',
                 'deactivated'=>'Deactivated Users',
                 'deleted'=>'Deleted Users',
                 'main'=>'Users',

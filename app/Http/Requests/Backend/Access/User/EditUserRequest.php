@@ -13,7 +13,7 @@ class EditUserRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return access()->allow('edit-users');
     }
 
     /**

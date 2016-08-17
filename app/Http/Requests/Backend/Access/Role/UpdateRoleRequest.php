@@ -13,7 +13,7 @@ class UpdateRoleRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return access()->allow('update-roles');
     }
 
     /**

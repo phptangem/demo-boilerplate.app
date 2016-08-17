@@ -13,7 +13,7 @@ class UpdateUserRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return access()->allow('edit-users');
     }
 
     /**
@@ -24,7 +24,8 @@ class UpdateUserRequest extends Request
     public function rules()
     {
         return [
-            //
+            'email'=>   'required|email',
+            'name' =>   'required',
         ];
     }
 }

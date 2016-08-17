@@ -144,8 +144,7 @@ class EloquentRoleRepository implements RoleRepositoryContract
                 $role->permissions()->sync([]);
             }else{
                 //Remove all permissions first
-                $role->permissions()->sync();
-
+                $role->permissions()->sync([]);
                 //Attach permissions if the role does not have all access
                 $current        = explode(',',  $input['permissions']);
                 $permissions    = [];

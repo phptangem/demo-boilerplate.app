@@ -16,10 +16,14 @@ return [
      * assigned_roles table used by access to save assigned roles to the database
      */
     'assigned_roles_table'=>'assigned_roles',
+
+    'permission' => App\Models\Access\Permission\Permission::class,
+    'permission_role_table'=> 'permission_role',
     /*
      * permission_user table used by Access to save relationship between permissions and users to the database.
      * This table is only for permissions that belong directly to a specific user and not a role
      */
+
     'permission_user_table' => 'permission_user',
     /*
      *Permissions table used by access to save permissions to the database

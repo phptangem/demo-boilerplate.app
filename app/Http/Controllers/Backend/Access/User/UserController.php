@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers\Backend\Access\User;
 
+use App\Http\Requests\Backend\Access\User\DeleteUserRequest;
+use App\Http\Requests\Backend\Access\User\EditUserRequest;
+use App\Http\Requests\Backend\Access\User\RestoreUserRequest;
+use App\Http\Requests\Backend\Access\User\UpdateUserPasswordRequest;
 use App\Repositories\Backend\Access\Permission\PermissionRepositoryContract;
 use App\Repositories\Backend\Access\Role\RoleRepositoryContract;
 use App\Repositories\Backend\Access\User\UserRepositoryContract;
@@ -13,6 +17,7 @@ use App\Http\Requests\Backend\Access\User\StoreUserRequest;
 use App\Http\Requests\Backend\Access\User\ChangeUserPasswordRequest;
 use App\Http\Requests\Backend\Access\User\MarkUserRequest;
 use App\Http\Requests\Backend\Access\User\PermanentlyDeleteUserRequest;
+use App\Http\Requests\Backend\Access\User\UpdateUserRequest;
 class UserController extends Controller
 {
     /**
@@ -98,7 +103,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id , EditUserRequest $request)
     {
         $user = $this->users->findOrThrowException($id, true);
         return view('backend.access.edit')
@@ -116,9 +121,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id, UpdateUserRequest $request)
     {
-        //
+        $this->users->update($id,
+            $request->except('assignees_roles','permission_user'),
+            $request->only('assignees_roles'),
+            $request->only('permission_user')
+        );
+
+        return redirect()->route('admin.access.users.index')->withFlashSuccess(trans('alerts.backend.users.updated'));
     }
 
     /**
@@ -127,13 +138,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id, DeleteUserRequest $request)
     {
         $this->users->destroy($id);
         return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.deleted'));
     }
 
-    public function restore($id)
+    public function restore($id, RestoreUserRequest $request)
     {
         $this->users->restore($id);
         return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.restored'));
@@ -167,8 +178,16 @@ class UserController extends Controller
 
         return redirect()->back()->withFlashSuccess(trans('alerts.backend.users.updated'));
     }
-    public function updatePassword($id)
-    {
 
+    /**
+     * @param $id
+     * @param UpdateUserPasswordRequest $request
+     * @return mixed
+     */
+    public function updatePassword($id, UpdateUserPasswordRequest $request)
+    {
+        $this->users->updatePassword($id,$request->all());
+
+        return redirect()->route('admin.access.users.index')->withFlashSuccess(trans('alerts.backend.users.updated_password'));
     }
 }

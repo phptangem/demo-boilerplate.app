@@ -53,7 +53,7 @@
                     <div class="col-lg-3">
                         @if(count($roles) > 0)
                             @foreach($roles as $role)
-                                <input type="checkbox" value="{{$role->id}}" name="assignees_roles" {{in_array($role->id, $user_roles) ? 'checked':''}} id="role-{{$role->id}}" />
+                                <input type="checkbox" value="{{$role->id}}" name="assignees_roles[]" {{in_array($role->id, $user_roles) ? 'checked':''}} id="role-{{$role->id}}" />
                                 <label for="" id="role-{{$role->id}}">{{ $role->name }}</label>
                                 <a href="#" data-role="role-{{$role->id}}" class="show-permissions small">
                                     (
