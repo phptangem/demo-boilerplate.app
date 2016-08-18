@@ -91,11 +91,11 @@ class EloquentPermissionGroupRepository implements PermissionGroupRepositoryCont
     {
         $permissionGroup = $this->find($id);
 
-        if($permissionGroup->childen->count()){
+        if($permissionGroup->children->count()){
             throw new GeneralException(trans('exceptions.backend.access.permissions.groups.has_children'));
         }
 
-        if($permissionGroup->permission->count()){
+        if($permissionGroup->permissions->count()){
             throw new GeneralException(trans('exceptions.backend.access.permissions.groups.associated_permissions'));
         }
 

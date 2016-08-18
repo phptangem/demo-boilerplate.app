@@ -107,9 +107,11 @@ class PermissionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UpdatePermissionRequest $request, $id)
     {
-        //
+
+        $this->permissions->update($id,$request->except('permission_roles'),$request->only('permission_roles'));
+        return redirect()->route('admin.access.roles.permissions.index')->withFlashSuccess(trans('alerts.backend.permissions.updated'));
     }
 
     /**

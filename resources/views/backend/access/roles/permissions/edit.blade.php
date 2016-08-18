@@ -12,9 +12,9 @@
 @section('content')
     {!! Form::model($permission, ['route'=>[ 'admin.access.roles.permissions.update',$permission->id],'class'=>'form-horizontal','role'=>'form','method'=>'PATCH']) !!}
     <div class="box box-success">
-        <div class="box-header">
+        <div class="box-header with-border">
             <h3 class="box-title">{{ trans('labels.backend.access.permissions.edit') }}</h3>
-            <div class="box-tools with-border">
+            <div class="box-tools pull-right">
                 @include('backend.access.includes.partials.header-buttons')
             </div>
         </div>
@@ -73,7 +73,7 @@
                             <div class="col-lg-10">
                                 @if(count($roles))
                                     @foreach($roles as $role)
-                                        <input type="checkbox" {{ $role->id == 1 ? 'disabled' :"" }} {{ in_array($role->id,$permission_roles)|| ($role->id == 1)? 'checked':'' }} value="{{ $role->id }}"><label
+                                        <input type="checkbox" name="permission_roles[]" {{ $role->id == 1 ? 'disabled' :"" }} {{ in_array($role->id,$permission_roles)|| ($role->id == 1)? 'checked':'' }} value="{{ $role->id }}"><label
                                                 for="role-{{$role->id}}">{!! $role->name !!}</label><br/>
                                         <div class="clearfix"></div>
                                     @endforeach

@@ -13,7 +13,7 @@ class StorePermissionGroupRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return access()->allow('create-permission-groups');
     }
 
     /**
@@ -24,7 +24,7 @@ class StorePermissionGroupRequest extends Request
     public function rules()
     {
         return [
-            //
+            'name'=>'required|unique:permission_groups'
         ];
     }
 }
